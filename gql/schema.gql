@@ -1,0 +1,13 @@
+type Villager @collection(name: "villagers") {
+    name: String!
+    personality: String
+    birthday: String
+    species: String
+    gender: String
+    catchPhrase: String
+    island: String
+}
+
+type Query {
+    allVillagers: [Villager!]! @index(name: "all_villagers")
+}
